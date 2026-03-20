@@ -194,7 +194,7 @@ class Character:
         self.max_hp = max(1, total_hp)
 
     def roll_occupation(self):
-        with open("occupations.json", "r") as f:
+        with open("de-occupations.json", "r") as f:
             occupation_data = json.load(f)
 
         occupation_roll = dice(1, 100)
@@ -205,42 +205,66 @@ class Character:
                 self.equipment.append(entry["goods"])
                 break
 
-        if self.occupation == "Farmer":
-            farmer_types = [
-                "Potato",
-                "Wheat",
-                "Turnip",
-                "Corn",
-                "Rice",
-                "Parsnip",
-                "Radish",
-                "Rutabaga",
-            ]
-            specialty = farmer_types[dice(1, 8) - 1]
-            self.occupation = f"{specialty} Farmer"
+        self.sacred_beasts()
+        self.seeds()
+        self.libram()
+        self.folio()
 
-        self.farm_animals()
-        self.fill_pushcart()
-
-    def farm_animals(self):
-        variety_animals = ["Sheep", "Goat", "Cow", "Duck", "Goose", "Mule"]
-        for i, item in enumerate(self.equipment):
-            if item in ["Hen", "Sow", "Herding dog"]:
-                pool = [item, item, random.choice(variety_animals)]
-                self.equipment[i] = random.choice(pool)
-
-    def fill_pushcart(self):
-        cart_contents = [
-            "Pushcart full of tomatoes",
-            "Empty pushcart",
-            "Pushcart full of straw",
-            "Pushcart carrying your dead",
-            "Pushcart full of dirt",
-            "Pushcart full of rocks",
+    def sacred_beasts(self):
+        sacred_beasts = [
+            "bearded thawn foundling",
+            "pair of pincer-lizards",
+            "tittle-bird",
+            "simiode",
         ]
         for i, item in enumerate(self.equipment):
-            if item == "Pushcart":
-                self.equipment[i] = random.choice(cart_contents)
+            if item == "Sacred beast":
+                self.equipment[i] = random.choice(sacred_beasts)
+
+    def seeds(self):
+        seed_types = [
+            "myrhadion seeds, 1 oz.",
+            "dymphian seeds, 1 oz.",
+            "black quince seeds, 1 oz.",
+            "long-stemmed stardrop seeds, 1 oz.",
+            "blood-flower seeds, 1 oz.",
+            "mandrake seeds, 1 oz.",
+            "star-blossom seeds, 1 oz.",
+            "moon-geranium seeds, 1 oz.",
+        ]
+        for i, item in enumerate(self.equipment):
+            if item == "Seeds, 1 oz.":
+                self.equipment[i] = random.choice(seed_types)
+
+    def libram(self):
+        libram_names = [
+            "Classical Killings and Mortefactions",
+            "Expositions and Dissolutions of Evil",
+            "History of Granvilunde",
+            "Attractive and Detractive Hyperordnets",
+            "Therapy for Hallucinants and Ghost-takers",
+            "Procedural Suggestions in Time of Risk",
+        ]
+
+        for i, item in enumerate(self.equipment):
+            if item == "Libram of obscure historical information":
+                self.equipment[i] = f"{item}: ({random.choice(libram_names)})"
+
+    def folio(self):
+        folio_subject = [
+            "Amberlin I",
+            "Archemand of Glaere",
+            "Dibarcas Maior",
+            "Llorio the Sorceress",
+            "Mael Lel Laio",
+            "Phandaal the Great",
+        ]
+
+        for i, item in enumerate(self.equipment):
+            if item == "Folio annotating the life of an arch-magician":
+                self.equipment[i] = (
+                    f"Folio annotating the life of the famous arch-magician ({random.choice(folio_subject)})"
+                )
 
     def roll_animus(self):
         with open("animus.json", "r") as f:
@@ -274,6 +298,8 @@ class Character:
 # Roll on the Thaumaturgical Curious table
 #
 # Scan equipment for AC-boosting items
+#
+# Add random level 1 spell selection ofr casebook for Sage (58-59) occupation
 #
 # Generate random name a la https://perchance.org/dying-earth-names#edit
 #

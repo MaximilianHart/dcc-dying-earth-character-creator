@@ -1,0 +1,446 @@
+[
+  {
+    "max": 1,
+    "occupation": "Aesthete",
+    "weapon": "Ferrule (as club)",
+    "goods": "Bottle of wine, excellent vintage"
+  },
+  {
+    "max": 2,
+    "occupation": "Adjutant",
+    "weapon": "Short sword",
+    "goods": "Morion, steel"
+  },
+  {
+    "max": 3,
+    "occupation": "Anthropophage",
+    "weapon": "Skinning knife (as dagger)",
+    "goods": "Sack of roots, vegetables, and seasonings"
+  },
+  {
+    "max": 4,
+    "occupation": "Artificer",
+    "weapon": "Spanner (as club)",
+    "goods": "Ageless substance of an ancient builder, 1 lb."
+  },
+  {
+    "max": 5,
+    "occupation": "Augur",
+    "weapon": "Knoblolly",
+    "goods": "Incense, 1 lb."
+  },
+  {
+    "max": 7,
+    "occupation": "Bandit",
+    "weapon": "Short sword",
+    "goods": "Skull-stone of a grue"
+  },
+  {
+    "max": 8,
+    "occupation": "Barbarian of East Almery",
+    "weapon": "Harpoon (as spear)",
+    "goods": "Carving of a sacred ape"
+  },
+  {
+    "max": 9,
+    "occupation": "Battle-gang veteran",
+    "weapon": "Battle-hook",
+    "goods": "Leather cap with ear-flaps"
+  },
+  {
+    "max": 10,
+    "occupation": "Boatswain",
+    "weapon": "Belaying pin (as club)",
+    "goods": "Clay pipe"
+  },
+  {
+    "max": 11,
+    "occupation": "Bravo",
+    "weapon": "Rapier",
+    "goods": "Jeweled earring worth 10 terces"
+  },
+  {
+    "max": 12,
+    "occupation": "Bursar",
+    "weapon": "Short sword",
+    "goods": "5 terces, 10 groats, 200 copper bits"
+  },
+  {
+    "max": 14,
+    "occupation": "Apprentice butcher",
+    "weapon": "Cleaver (as axe)",
+    "goods": "Sacred beast"
+  },
+  {
+    "max": 15,
+    "occupation": "Caravan teamster",
+    "weapon": "Club",
+    "goods": "Rope, 50’"
+  },
+  {
+    "max": 16,
+    "occupation": "Carpenter",
+    "weapon": "Hammer (as club)",
+    "goods": "Nails, 1 lb."
+  },
+  {
+    "max": 17,
+    "occupation": "Castellan",
+    "weapon": "Whip",
+    "goods": "Satin pillow"
+  },
+  {
+    "max": 18,
+    "occupation": "Catechumen",
+    "weapon": "Staff",
+    "goods": "Candles, 20"
+  },
+  {
+    "max": 20,
+    "occupation": "Chamberlain",
+    "weapon": "Club",
+    "goods": "White gloves"
+  },
+  {
+    "max": 21,
+    "occupation": "Clerk",
+    "weapon": "Quill (as dart)",
+    "goods": "Ledger"
+  },
+  {
+    "max": 22,
+    "occupation": "Cloud-rider",
+    "weapon": "Thamber oak limb (as club)",
+    "goods": "Quality cloak"
+  },
+  {
+    "max": 23,
+    "occupation": "Corybant",
+    "weapon": "Short sword",
+    "goods": "Small drum"
+  },
+  {
+    "max": 25,
+    "occupation": "Deckhand",
+    "weapon": "Knife (as dagger)",
+    "goods": "Cleaning rag"
+  },
+  {
+    "max": 26,
+    "occupation": "Diviner",
+    "weapon": "Staff",
+    "goods": "Animal entrails"
+  },
+  {
+    "max": 27,
+    "occupation": "Ecclesiarch",
+    "weapon": "Staff",
+    "goods": "Vial of aspergantium"
+  },
+  {
+    "max": 28,
+    "occupation": "Embalmer",
+    "weapon": "Knife (as dagger)",
+    "goods": "Preserved organ"
+  },
+  {
+    "max": 29,
+    "occupation": "Evangel",
+    "weapon": "Staff",
+    "goods": "Ceremonial shoes"
+  },
+  {
+    "max": 30,
+    "occupation": "Factotum",
+    "weapon": "Hammer (as club)",
+    "goods": "Book of unpublished stories"
+  },
+  {
+    "max": 31,
+    "occupation": "Fire-stoker",
+    "weapon": "Iron poker (as club)",
+    "goods": "Bundle of wood, 1 lb."
+  },
+  {
+    "max": 32,
+    "occupation": "Gardener",
+    "weapon": "Spade (as club)",
+    "goods": "Seeds, 1 oz."
+  },
+  {
+    "max": 33,
+    "occupation": "Glass-blower",
+    "weapon": "Swage (as dagger)",
+    "goods": "Set of tools, swages and crucibles"
+  },
+  {
+    "max": 34,
+    "occupation": "Herbalist",
+    "weapon": "Staff",
+    "goods": "Spase-bush buds, 1 oz."
+  },
+  {
+    "max": 36,
+    "occupation": "Hetman",
+    "weapon": "Dagger",
+    "goods": "Shaggy fur hat"
+  },
+  {
+    "max": 37,
+    "occupation": "Householder",
+    "weapon": "Club",
+    "goods": "Heap of reeds"
+  },
+  {
+    "max": 38,
+    "occupation": "Huntsman",
+    "weapon": "Shortbow",
+    "goods": "Deodand hand"
+  },
+  {
+    "max": 39,
+    "occupation": "Innkeeper",
+    "weapon": "Dagger",
+    "goods": "20 groats; bottle of wine"
+  },
+  {
+    "max": 40,
+    "occupation": "Key-keeper",
+    "weapon": "Club",
+    "goods": "Set of ancient keys"
+  },
+  {
+    "max": 41,
+    "occupation": "Liveried servant",
+    "weapon": "Cudgel (as club)",
+    "goods": "Purple livery"
+  },
+  {
+    "max": 42,
+    "occupation": "Lobster fisher",
+    "weapon": "Knife (as dagger)",
+    "goods": "Lobster trap"
+  },
+  {
+    "max": 43,
+    "occupation": "Major-domo",
+    "weapon": "Staff",
+    "goods": "Trained dog"
+  },
+  {
+    "max": 44,
+    "occupation": "Maugifer",
+    "weapon": "Staff",
+    "goods": "Potted olive tree"
+  },
+  {
+    "max": 46,
+    "occupation": "Melantine bargemaster",
+    "weapon": "Pole (as staff)",
+    "goods": "Antique silver coin, 17th Aeon"
+  },
+  {
+    "max": 47,
+    "occupation": "Mermelant groom",
+    "weapon": "Dagger",
+    "goods": "Bottle of beer"
+  },
+  {
+    "max": 49,
+    "occupation": "Milliner",
+    "weapon": "Iron (as club)",
+    "goods": "Fine hat"
+  },
+  {
+    "max": 50,
+    "occupation": "Moor-man",
+    "weapon": "Short sword",
+    "goods": "Leather armor"
+  },
+  {
+    "max": 52,
+    "occupation": "Pantologist",
+    "weapon": "Staff",
+    "goods": "Libram of obscure historical information"
+  },
+  {
+    "max": 53,
+    "occupation": "Pilgrim",
+    "weapon": "Staff",
+    "goods": "Lentils, 1 lb."
+  },
+  {
+    "max": 54,
+    "occupation": "Poet",
+    "weapon": "Quill (as dart)",
+    "goods": "Scroll of odes"
+  },
+  {
+    "max": 55,
+    "occupation": "Professional witch-chaser",
+    "weapon": "Longsword",
+    "goods": "Tall black boots"
+  },
+  {
+    "max": 56,
+    "occupation": "Publican",
+    "weapon": "Short sword",
+    "goods": "Small barrel of beer"
+  },
+  {
+    "max": 57,
+    "occupation": "Quarrier",
+    "weapon": "Chisel (as dagger)",
+    "goods": "Curio worth 20 terces"
+  },
+  {
+    "max": 59,
+    "occupation": "Sage",
+    "weapon": "Staff",
+    "goods": "Casebook with random level 1 spell"
+  },
+  {
+    "max": 61,
+    "occupation": "Savant",
+    "weapon": "Dagger",
+    "goods": "Folio annotating the life of an arch-magician"
+  },
+  {
+    "max": 62,
+    "occupation": "Seer",
+    "weapon": "Sling",
+    "goods": "Pouch with animal bones"
+  },
+  {
+    "max": 63,
+    "occupation": "Ship-master",
+    "weapon": "Short sword",
+    "goods": "Spigoted golden drinking boss"
+  },
+  {
+    "max": 65,
+    "occupation": "Shipping agent",
+    "weapon": "Dagger",
+    "goods": "Spectacles"
+  },
+  {
+    "max": 67,
+    "occupation": "Shopkeeper",
+    "weapon": "Dagger",
+    "goods": "Fine vest"
+  },
+  {
+    "max": 68,
+    "occupation": "Slime-diver",
+    "weapon": "Trowel (as dagger)",
+    "goods": "Bucket of cold tea"
+  },
+  {
+    "max": 69,
+    "occupation": "Spraling costermonger",
+    "weapon": "Shucking knife (as dagger)",
+    "goods": "Spraling, 1 lb."
+  },
+  {
+    "max": 70,
+    "occupation": "Steward",
+    "weapon": "Short sword",
+    "goods": "Salver"
+  },
+  {
+    "max": 71,
+    "occupation": "Subaltern",
+    "weapon": "Dagger",
+    "goods": "Sturdy robe"
+  },
+  {
+    "max": 72,
+    "occupation": "Supercargo",
+    "weapon": "Short sword",
+    "goods": "Ledger"
+  },
+  {
+    "max": 73,
+    "occupation": "Tavern server",
+    "weapon": "Knife (as dagger)",
+    "goods": "Drink tray (as shield)"
+  },
+  {
+    "max": 74,
+    "occupation": "Timber-cutter",
+    "weapon": "Handaxe",
+    "goods": "Rope, 50’"
+  },
+  {
+    "max": 76,
+    "occupation": "Trundler",
+    "weapon": "Dagger",
+    "goods": "Large rock"
+  },
+  {
+    "max": 77,
+    "occupation": "Undercook",
+    "weapon": "Knife (as dagger)",
+    "goods": "Cast-iron pot"
+  },
+  {
+    "max": 78,
+    "occupation": "Under-hierophant",
+    "weapon": "Cudgel (as club)",
+    "goods": "Sacred robes"
+  },
+  {
+    "max": 81,
+    "occupation": "Vat-thing cast-off",
+    "weapon": "Short sword",
+    "goods": "Riding horse"
+  },
+  {
+    "max": 84,
+    "occupation": "Vat-thing novitiate",
+    "weapon": "Sling",
+    "goods": "Parchment, 10 sheets"
+  },
+  {
+    "max": 87,
+    "occupation": "Vat-thing foundling",
+    "weapon": "Spear",
+    "goods": "Gems worth 20 terces"
+  },
+  {
+    "max": 90,
+    "occupation": "Vat-thing servitor",
+    "weapon": "Knife (as dagger)",
+    "goods": "Caged minuscule bird-woman"
+  },
+  {
+    "max": 92,
+    "occupation": "Vat-thing courtesan",
+    "weapon": "Dagger",
+    "goods": "Flute"
+  },
+  {
+    "max": 95,
+    "occupation": "Watchman",
+    "weapon": "Dagger",
+    "goods": "Spyglass"
+  },
+  {
+    "max": 97,
+    "occupation": "Wheriot driver",
+    "weapon": "Whip",
+    "goods": "Saddle"
+  },
+  {
+    "max": 99,
+    "occupation": "Worminger",
+    "weapon": "Double-cambered fluke-chister (as dagger)",
+    "goods": "Bottle of worm tonic"
+  },
+  {
+    "max": 100,
+    "occupation": "Yard-keeper",
+    "weapon": "Short sword",
+    "goods": "Feed, 10 lbs."
+  }
+]
