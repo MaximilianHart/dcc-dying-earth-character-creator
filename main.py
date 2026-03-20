@@ -1,4 +1,5 @@
 import random
+import json
 
 
 def main():
@@ -22,7 +23,11 @@ def main():
             f"{'Personality:':13} {peasant.stats['Personality']} ({peasant.personality_mod:+})"
         )
         print(f"{'Luck:':13} {peasant.stats['Luck']} ({peasant.luck_mod:+})")
-        print(f"AC:  {peasant.ac}")
+        print(f"Max HP: {peasant.max_hp}     AC: {peasant.ac}")
+
+        print(f"\nBirth Augur: {peasant.birth_augur}")
+        print(f"Lucky Roll: {peasant.lucky_roll} ({peasant.luck_mod:+})")
+
         print("-----------------------")
 
         user_input = input(
@@ -166,16 +171,27 @@ class Character:
         for stat_name in self.stats:
             self.stats[stat_name] = dice(3, 6)
 
+    def roll_birth_augur(self):
+        with open("birth_augurs.json", "r") as f:
+            augur_data = json.load(f)
+
+        luck_roll = augur_data[str(dice(1, 30))]
+
+        self.birth_augur = luck_roll["sign"]
+        self.lucky_roll = luck_roll["bonus"]
+
     def roll_hp(self):
-        pass
+        total_hp = dice(1, 4) + self.stamina_mod
+        if self.birth_augur == "Bountiful harvest":
+            total_hp += self.luck_mod
+        self.max_hp = max(1, total_hp)
 
     def generate_zero_level(self):
         self.roll_stats()
+        self.roll_birth_augur()
         self.roll_hp()
 
 
-# Determine birth auger and "lucky roll"
-#
 # Determine occupation, starting weapon, trade goods
 #
 # Determine starting animus

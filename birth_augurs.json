@@ -1,0 +1,56 @@
+{
+  "1": { "sign": "Harsh winter", "bonus": "All attack rolls" },
+  "2": { "sign": "The bull", "bonus": "Melee attack rolls" },
+  "3": { "sign": "Fortunate date", "bonus": "Missile fire attack rolls" },
+  "4": { "sign": "Raised by wolves", "bonus": "Unarmed attack rolls" },
+  "5": { "sign": "Conceived on horseback", "bonus": "Mounted attack rolls" },
+  "6": { "sign": "Born on the battlefield", "bonus": "Damage rolls" },
+  "7": { "sign": "Path of the bear", "bonus": "Melee damage rolls" },
+  "8": { "sign": "Hawkeye", "bonus": "Missile fire damage rolls" },
+  "9": {
+    "sign": "Pack hunter",
+    "bonus": "Attack/damage for 0-level starting weapon"
+  },
+  "10": {
+    "sign": "Born under the loom",
+    "bonus": "Skill checks (including thief skills)"
+  },
+  "11": { "sign": "Fox’s cunning", "bonus": "Find/disable traps" },
+  "12": { "sign": "Four-leafed clover", "bonus": "Find secret doors" },
+  "13": { "sign": "Seventh son", "bonus": "Spell checks" },
+  "14": { "sign": "The raging storm", "bonus": "Spell damage" },
+  "15": { "sign": "Righteous heart", "bonus": "Turn unholy checks" },
+  "16": {
+    "sign": "Survived the plague",
+    "bonus": "Magical healing (If a cleric, applies to all healing the cleric performs. If not a cleric, applies to all magical healing received from other sources.)"
+  },
+  "17": { "sign": "Lucky sign", "bonus": "Saving throws" },
+  "18": { "sign": "Guardian angel", "bonus": "Saving throws to escape traps" },
+  "19": {
+    "sign": "Survived a spider bite",
+    "bonus": "Saving throws against poison"
+  },
+  "20": { "sign": "Struck by lightning", "bonus": "Reflex saving throws" },
+  "21": { "sign": "Lived through famine", "bonus": "Fortitude saving throws" },
+  "22": { "sign": "Resisted temptation", "bonus": "Willpower saving throws" },
+  "23": { "sign": "Charmed house", "bonus": "Armor Class" },
+  "24": { "sign": "Speed of the cobra", "bonus": "Initiative" },
+  "25": {
+    "sign": "Bountiful harvest",
+    "bonus": "Hit points (applies at each level)"
+  },
+  "26": {
+    "sign": "Warrior’s arm",
+    "bonus": "Critical hit tables (Luck normally affects critical hits and fumbles. On this result, the modifier is doubled for purposes of crits or fumbles.)"
+  },
+  "27": { "sign": "Unholy house", "bonus": "Corruption rolls" },
+  "28": {
+    "sign": "The Broken Star",
+    "bonus": "Fumbles (Luck normally affects critical hits and fumbles. On this result, the modifier is doubled for purposes of crits or fumbles.)"
+  },
+  "29": { "sign": "Birdsong", "bonus": "Number of languages" },
+  "30": {
+    "sign": "Wild child",
+    "bonus": "Speed (each +1/-1 = +5ft/-5ft speed)"
+  }
+}
