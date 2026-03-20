@@ -1,0 +1,152 @@
+[
+  {
+    "max": 1,
+    "animus": "Bauble-thief",
+    "desc": "The PC carries a magical trinket misappropriated from a vengeful magician. Discarding or losing the curio imparts a permanent loss of 2 points of Luck. Roll on the Thaumaturgical Curios table to determine the stolen talisman."
+  },
+  {
+    "max": 2,
+    "animus": "Syncretic heretic",
+    "desc": "A religious sect avows to imprison the PC for heretical beliefs. Working with the judge, the player may select a specific town or region where the sect has adherents, requiring the PC to take extra precautions to disguise or hide their identity when traveling through those areas."
+  },
+  {
+    "max": 3,
+    "animus": "Devoured wizardly morsel",
+    "desc": "The PC's inopportune hunger has drawn the ire of a powerful sorcerer. The PC must repay the debt through acts of service, both small and large, at the request of this involuntary patron. See 'Equipoise and Exactitudes', p. 5 of the Primer of Practical Magic, for suggestions of the types of requests that may be issued."
+  },
+  {
+    "max": 4,
+    "animus": "Acerbic underling",
+    "desc": "The PC is sought by a former master for showing unwise judgment in remonstrating his punctilious commands. Whenever the PC seeks employment, there is a chance their past obduracy may impact the new endeavor."
+  },
+  {
+    "max": 5,
+    "animus": "Metathasmic loadstone",
+    "desc": "Entities from the sub-worlds are drawn to the PC. There is a 1% chance whenever the PC uses a magic item or casts a spell that it draws the attention of an otherworldly entity. Roll 1d4 for type: (1) type II demon of Kalu; (2) type III demon of Fauvune; (3) type IV demon of Jeldred; (4) type V demon of La-Er."
+  },
+  {
+    "max": 6,
+    "animus": "Demonstrated chicanery",
+    "desc": "The PC had one too many lucky tosses in a recent game of Skax. When in a public inn or tavern, there is a chance they will be recognized by a former mark or one of their relatives."
+  },
+  {
+    "max": 7,
+    "animus": "Tactless buffoon",
+    "desc": "A village seeks retribution after the PC thoughtlessly mocked one of their most beloved citizens with a sleight of magic to cause a mouth to form on the citizen's forehead and revile the crowd, much to the denizen's discomfiture. The player or judge may select a specific village where the imprecation took place, where the PC will be recognized and apprehended on sight."
+  },
+  {
+    "max": 8,
+    "animus": "Craven intruder",
+    "desc": "A temple has a bounty on the PC's head for pilfering their most precious icon in the dead of night. Claimants on the bounty will pursue and harass the PC, seeking remuneration for their efforts. The judge should determine the frequency of these attempts (for example, fortnightly, monthly, or as a random encounter) when the PC travels."
+  },
+  {
+    "max": 9,
+    "animus": "Sins of the father",
+    "desc": "A vengeful magician had placed a hereditary curse on the PC's father. With the recent passing of their sire, the curse rests upon the PC's shoulders. The curse can take many forms, and should be discussed between the player and the judge. For example, the PC may only be able to consume raw spurge, or they may sneeze each time they draw a weapon. In some situations, the curse may act to the detriment of the PC and/or party as determined by the judge."
+  },
+  {
+    "max": 10,
+    "animus": "Augured entrails",
+    "desc": "An insane mage believes the PC is destined to kill him and wants to take the PC out first. The PC is subject to unusual, and seemingly localized, mishaps—trees falling across their path, tumbling rockslides, blizzards in the middle of summer, etc., which may require saving throws to avoid injury at the discretion of the judge."
+  },
+  {
+    "max": 11,
+    "animus": "Desecrated idol",
+    "desc": "The PC inadvertently caused affront to a group of religious fanatics. In return, their god has bestowed the PC with a humerous grotesquerie such as tweaking their ears by pulling them out to a length of 2', imposing an ulcerous cyst on the top of their nose, or imparting a large painful carbuncle on each buttock."
+  },
+  {
+    "max": 12,
+    "animus": "Abandoned post",
+    "desc": "The unfortunate PC decided to attend to several glasses of Silver Hyssop just before wind-stick devils attacked the caravan they were hired to guard. The master now seeks payment from the PC for the wagons that were destroyed and several farlocks that were carried off in the attack."
+  },
+  {
+    "max": 13,
+    "animus": "Released titan",
+    "desc": "The PC unlocked a spell that was keeping a great evil at bay. Survivors in the region bitterly curse the PC's name, passing down their hatred for generations."
+  },
+  {
+    "max": 14,
+    "animus": "Tricked village",
+    "desc": "To make ends meet, the PC claimed to be the lost son of a former hetmen; after being clothed and fed, the PC made off with a part of the village treasure, including a number of cursed coins. Whenever the PC spends money, 2d10 random terces transform into valueless metal slugs once the transaction is complete, triggering the wrath of any shopkeeper who happens to notice the deception."
+  },
+  {
+    "max": 15,
+    "animus": "False voyant",
+    "desc": "The PC angered the Aumoklopelastianic Cabal by posing as an auger whose predictions came true more often than their own members'. The Cabal attempts to undermine the PC at every opportunity by seeking to use any information they uncover on the duplicity of the PC's activities."
+  },
+  {
+    "max": 16,
+    "animus": "Vituperation curse",
+    "desc": "The PC angered an old woman who turned out to be a Cobalt Mountain witch. The curse can take many forms, and judges are encouraged to use the examples of minor curses included in 'Squalms and Curses' (Primer of Practical Magic, p. 31) for inspiration."
+  },
+  {
+    "max": 17,
+    "animus": "Vicissitudes of war",
+    "desc": "The PC was conscripted by the losing side of two forces and fled the battlefield before a major engagement, only to have their lord rally to win the day. The PC is branded as a known coward and deserter by agents loyal to the lord"
+  },
+  {
+    "max": 18,
+    "animus": "Untoward star",
+    "desc": "The PC ahs attracted the attentions of a being from the far star of Canopus. The entity merges with the PC, becoming a symbiotic part of their existence. At times, the entity makes its desires known through painful inducements, requiring a DC 15 Fort save to resist."
+  },
+  {
+    "max": 19,
+    "animus": "Moral turpitude",
+    "desc": "The PC offended a group of orthodox Funambulous Evangels, causing them to decry the PC's soporific philosophies. As consequence for such dangerous blasphemies, the PC was fitted with cumbersome ceremonial shoes that incur a -5' speed penalty and are magically warded against removal."
+  },
+  {
+    "max": 20,
+    "animus": "Committed solecism",
+    "desc": "The PC, and their ill-bred manners, offended a tribe of desert-men before fleeing on a stolen raft on the River Asc. Hunters who wear leather smocks and are lean as snakes now pursue the PC, searching the inns and taverns for evidence of the PC’s passage."
+  },
+  {
+    "max": 21,
+    "animus": "Stolen sinecure",
+    "desc": "The PC made away with the emoluments of another who has vowed to bring the PC to justice. The PC’s likeness can be found at ports where it has been distributed to ship-masters, along with a posted bond against the PC’s capture."
+  },
+  {
+    "max": 22,
+    "animus": "Scape-grace",
+    "desc": "The PC is blamed for the ill luck of a group of traveling Maots who discovered all their harnessed corpses floating away after staying the night in the PC's hovel. The Maots have tasked the PC with replacing the missing corpses--starting with the PC's own if necessary."
+  },
+  {
+    "max": 23,
+    "animus": "Sardonic wit",
+    "desc": "The PC made an offhand disparaging remark to a patron who turned out to be the courtesan of a powerful local official. When the PC attempts to conduct business, there is a chance the official will exert some negative influence over the transaction."
+  },
+  {
+    "max": 24,
+    "animus": "Uncouth roisterer",
+    "desc": "The PC mocked a cachectic pilgrim's rehearsed cries of passion and devotional frenzies at the recent Lustral Rites. The PC was brought to trial before the priests in absentia, and was convicted."
+  },
+  {
+    "max": 25,
+    "animus": "Rakehell",
+    "desc": "The PC's mother was a member of a prominent family, whose vices turned them to debt now sought as due by hired collectors. At times when the PC comes into significant wealth, the collectors--accompanied by their captive erbs--attempt to lay claim to a sizeable portion."
+  },
+  {
+    "max": 26,
+    "animus": "Stolen quintessence",
+    "desc": "The PC made away with a magician’s zamander of the first water before losing it in an unadvisable investment. As repayment, the magician demands twenty small ingots of diphany, occasionally sending a pair of strong-armed madlocks to remind the PC of this debt."
+  },
+  {
+    "max": 27,
+    "animus": "Pusillanimous lookout",
+    "desc": "The PC abandoned their post to drink at the local tavern, leaving their village open to an attack by grues who absconded with several prominent members of the community. The village has posted a generous reward for the PC’s capture."
+  },
+  {
+    "max": 28,
+    "animus": "Indiscreet nympharium guard",
+    "desc": "The PC is accused of reducing the value of the wares they were hired to watch, and is attended by a bill of penury during their travels."
+  },
+  {
+    "max": 29,
+    "animus": "Accused insidiator",
+    "desc": "In their cups one night, the PC boasted of a rival’s claim to the throne and was overheard by the current prince’s loyal spies. The PC was forced to flee ahead of the armed constables sent with an execution warrant."
+  },
+  {
+    "max": 30,
+    "animus": "Woeful malediction",
+    "desc": "The PC stepped on a wysen-imp who cursed them with its dying breath, causing the PC to turn a lustrous color whenever conveying a deceit, alternating between golden, green, and lavender hues."
+  }
+]

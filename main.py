@@ -1,5 +1,6 @@
 import random
 import json
+import textwrap
 
 
 def main():
@@ -36,6 +37,14 @@ def main():
         print(f"{'Occupation:':12} {peasant.occupation}")
         character_equipment = ", ".join(peasant.equipment)
         print(f"{'Equipment:':12} {character_equipment}")
+        print("-" * 40)
+        print(f"Animus: {peasant.animus['Animus']}")
+        animus_wrapper = textwrap.TextWrapper(width=50)
+        animus_description = animus_wrapper.fill(
+            peasant.animus["Animus Description"] or ""
+        )
+        print(animus_description)
+        print("-" * 40)
 
         user_input = input(
             "\nType r to repeat and create a new peasant, or q to finish..."
@@ -274,7 +283,7 @@ class Character:
         for entry in animus_data:
             if animus_roll <= entry["max"]:
                 self.animus["Animus"] = entry["animus"]
-                self.animus["Animus Description"] = entry["animus"]
+                self.animus["Animus Description"] = entry["desc"]
                 break
 
     def generate_zero_level(self):
