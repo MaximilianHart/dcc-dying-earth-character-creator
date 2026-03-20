@@ -1,0 +1,462 @@
+[
+  {
+    "max": 1,
+    "occupation": "Alchemist",
+    "weapon": "Staff",
+    "goods": "Oil, 1 flask"
+  },
+  {
+    "max": 2,
+    "occupation": "Animal trainer",
+    "weapon": "Club",
+    "goods": "Pony"
+  },
+  {
+    "max": 3,
+    "occupation": "Armorer",
+    "weapon": "Hammer (as club)",
+    "goods": "Iron helmet"
+  },
+  {
+    "max": 4,
+    "occupation": "Astrologer",
+    "weapon": "Dagger",
+    "goods": "Spyglass"
+  },
+  {
+    "max": 5,
+    "occupation": "Barber",
+    "weapon": "Razor (as dagger)",
+    "goods": "Scissors"
+  },
+  {
+    "max": 6,
+    "occupation": "Beadle",
+    "weapon": "Staff",
+    "goods": "Holy symbol"
+  },
+  {
+    "max": 7,
+    "occupation": "Beekeeper",
+    "weapon": "Staff",
+    "goods": "Jar of honey"
+  },
+  {
+    "max": 8,
+    "occupation": "Blacksmith",
+    "weapon": "Hammer (as club)",
+    "goods": "Steel tongs"
+  },
+  {
+    "max": 9,
+    "occupation": "Butcher",
+    "weapon": "Cleaver (as axe)",
+    "goods": "Side of beef"
+  },
+  {
+    "max": 10,
+    "occupation": "Caravan guard",
+    "weapon": "Short sword",
+    "goods": "Linen, 1 yard"
+  },
+  {
+    "max": 11,
+    "occupation": "Cheesemaker",
+    "weapon": "Cudgel (as staff)",
+    "goods": "Stinky cheese"
+  },
+  {
+    "max": 12,
+    "occupation": "Cobbler",
+    "weapon": "Awl (as dagger)",
+    "goods": "Shoehorn"
+  },
+  {
+    "max": 13,
+    "occupation": "Confidence artist",
+    "weapon": "Dagger",
+    "goods": "Quality cloak"
+  },
+  {
+    "max": 14,
+    "occupation": "Cooper",
+    "weapon": "Crowbar (as club)",
+    "goods": "Barrel"
+  },
+  {
+    "max": 15,
+    "occupation": "Costermonger",
+    "weapon": "Knife (as dagger)",
+    "goods": "Fruit"
+  },
+  {
+    "max": 16,
+    "occupation": "Cutpurse",
+    "weapon": "Dagger",
+    "goods": "Small chest"
+  },
+  {
+    "max": 17,
+    "occupation": "Ditch digger",
+    "weapon": "Shovel (as staff)",
+    "goods": "Fine dirt, 1 lb."
+  },
+  {
+    "max": 18,
+    "occupation": "Dock worker",
+    "weapon": "Pole (as staff)",
+    "goods": "Wooden crate"
+  },
+  {
+    "max": 19,
+    "occupation": "Dwarven apothecarist",
+    "weapon": "Cudgel (as staff)",
+    "goods": "Steel vial"
+  },
+  {
+    "max": 20,
+    "occupation": "Dwarven blacksmith",
+    "weapon": "Hammer (as club)",
+    "goods": "Mithril, 1 oz."
+  },
+  {
+    "max": 21,
+    "occupation": "Dwarven chest-maker",
+    "weapon": "Chisel (as dagger)",
+    "goods": "Wood, 10 lbs."
+  },
+  {
+    "max": 22,
+    "occupation": "Dwarven herder",
+    "weapon": "Staff",
+    "goods": "Sow"
+  },
+  {
+    "max": 24,
+    "occupation": "Dwarven miner",
+    "weapon": "Pick (as club)",
+    "goods": "Lantern"
+  },
+  {
+    "max": 25,
+    "occupation": "Dwarven mushroom-farmer",
+    "weapon": "Shovel (as staff)",
+    "goods": "Sack"
+  },
+  {
+    "max": 26,
+    "occupation": "Dwarven rat-catcher",
+    "weapon": "Club",
+    "goods": "Net"
+  },
+  {
+    "max": 28,
+    "occupation": "Dwarven stonemason",
+    "weapon": "Hammer (as club)",
+    "goods": "Fine stone, 10 lbs."
+  },
+  {
+    "max": 29,
+    "occupation": "Elven artisan",
+    "weapon": "Staff",
+    "goods": "Clay, 1 lb."
+  },
+  {
+    "max": 30,
+    "occupation": "Elven barrister",
+    "weapon": "Quill (as dart)",
+    "goods": "Book"
+  },
+  {
+    "max": 31,
+    "occupation": "Elven chandler",
+    "weapon": "Scissors (as dagger)",
+    "goods": "Candles, 20"
+  },
+  {
+    "max": 32,
+    "occupation": "Elven falconer",
+    "weapon": "Dagger",
+    "goods": "Falcon"
+  },
+  {
+    "max": 34,
+    "occupation": "Elven forester",
+    "weapon": "Staff",
+    "goods": "Herbs, 1 lb."
+  },
+  {
+    "max": 35,
+    "occupation": "Elven glassblower",
+    "weapon": "Hammer (as club)",
+    "goods": "Glass beads"
+  },
+  {
+    "max": 36,
+    "occupation": "Elven navigator",
+    "weapon": "Shortbow",
+    "goods": "Spyglass"
+  },
+  {
+    "max": 38,
+    "occupation": "Elven sage",
+    "weapon": "Dagger",
+    "goods": "Parchment and quill pen"
+  },
+  {
+    "max": 47,
+    "occupation": "Farmer",
+    "weapon": "Pitchfork (as spear)",
+    "goods": "Hen"
+  },
+  {
+    "max": 48,
+    "occupation": "Fortune-teller",
+    "weapon": "Dagger",
+    "goods": "Tarot deck"
+  },
+  { "max": 49, "occupation": "Gambler", "weapon": "Club", "goods": "Dice" },
+  {
+    "max": 50,
+    "occupation": "Gongfarmer",
+    "weapon": "Trowel (as dagger)",
+    "goods": "Sack of night soil"
+  },
+  {
+    "max": 52,
+    "occupation": "Grave digger",
+    "weapon": "Shovel (as staff)",
+    "goods": "Trowel"
+  },
+  {
+    "max": 54,
+    "occupation": "Guild beggar",
+    "weapon": "Sling",
+    "goods": "Crutches"
+  },
+  {
+    "max": 55,
+    "occupation": "Halfling chicken butcher",
+    "weapon": "Handaxe",
+    "goods": "Chicken meat, 5 lbs."
+  },
+  {
+    "max": 57,
+    "occupation": "Halfling dyer",
+    "weapon": "Staff",
+    "goods": "Fabric, 3 yards"
+  },
+  {
+    "max": 58,
+    "occupation": "Halfling glovemaker",
+    "weapon": "Awl (as dagger)",
+    "goods": "Gloves, 4 pairs"
+  },
+  {
+    "max": 59,
+    "occupation": "Halfling wanderer",
+    "weapon": "Sling",
+    "goods": "Hex doll"
+  },
+  {
+    "max": 60,
+    "occupation": "Halfling haberdasher",
+    "weapon": "Scissors (as dagger)",
+    "goods": "Fine suits, 3 sets"
+  },
+  {
+    "max": 61,
+    "occupation": "Halfling mariner",
+    "weapon": "Knife (as dagger)",
+    "goods": "Sailcloth, 2 yards"
+  },
+  {
+    "max": 62,
+    "occupation": "Halfling moneylender",
+    "weapon": "Short sword",
+    "goods": "5 gp, 10 sp, 200 cp"
+  },
+  {
+    "max": 63,
+    "occupation": "Halfling trader",
+    "weapon": "Short sword",
+    "goods": "20 sp"
+  },
+  {
+    "max": 64,
+    "occupation": "Halfling vagrant",
+    "weapon": "Club",
+    "goods": "Begging bowl"
+  },
+  {
+    "max": 65,
+    "occupation": "Healer",
+    "weapon": "Club",
+    "goods": "Holy water, 1 vial"
+  },
+  {
+    "max": 66,
+    "occupation": "Herbalist",
+    "weapon": "Club",
+    "goods": "Herbs, 1 lb."
+  },
+  {
+    "max": 67,
+    "occupation": "Herder",
+    "weapon": "Staff",
+    "goods": "Herding dog"
+  },
+  {
+    "max": 69,
+    "occupation": "Hunter",
+    "weapon": "Shortbow",
+    "goods": "Deer pelt"
+  },
+  {
+    "max": 70,
+    "occupation": "Indentured servant",
+    "weapon": "Staff",
+    "goods": "Locket"
+  },
+  {
+    "max": 71,
+    "occupation": "Jester",
+    "weapon": "Dart",
+    "goods": "Silk clothes"
+  },
+  {
+    "max": 72,
+    "occupation": "Jeweler",
+    "weapon": "Dagger",
+    "goods": "Gem worth 20 gp"
+  },
+  {
+    "max": 73,
+    "occupation": "Locksmith",
+    "weapon": "Dagger",
+    "goods": "Fine tools"
+  },
+  {
+    "max": 74,
+    "occupation": "Mendicant",
+    "weapon": "Club",
+    "goods": "Cheese dip"
+  },
+  {
+    "max": 75,
+    "occupation": "Mercenary",
+    "weapon": "Longsword",
+    "goods": "Hide armor"
+  },
+  {
+    "max": 76,
+    "occupation": "Merchant",
+    "weapon": "Dagger",
+    "goods": "4 gp, 14 sp, 27 cp"
+  },
+  {
+    "max": 77,
+    "occupation": "Miller/baker",
+    "weapon": "Club",
+    "goods": "Flour, 1 lb."
+  },
+  {
+    "max": 78,
+    "occupation": "Minstrel",
+    "weapon": "Dagger",
+    "goods": "Ukulele"
+  },
+  {
+    "max": 79,
+    "occupation": "Noble",
+    "weapon": "Longsword",
+    "goods": "Gold ring worth 10 gp"
+  },
+  { "max": 80, "occupation": "Orphan", "weapon": "Club", "goods": "Rag doll" },
+  { "max": 81, "occupation": "Ostler", "weapon": "Staff", "goods": "Bridle" },
+  {
+    "max": 82,
+    "occupation": "Outlaw",
+    "weapon": "Short sword",
+    "goods": "Leather armor"
+  },
+  {
+    "max": 83,
+    "occupation": "Rope maker",
+    "weapon": "Knife (as dagger)",
+    "goods": "Rope, 100’"
+  },
+  {
+    "max": 84,
+    "occupation": "Scribe",
+    "weapon": "Dart",
+    "goods": "Parchment, 10 sheets"
+  },
+  {
+    "max": 85,
+    "occupation": "Shaman",
+    "weapon": "Mace",
+    "goods": "Herbs, 1 lb."
+  },
+  {
+    "max": 86,
+    "occupation": "Slave",
+    "weapon": "Club",
+    "goods": "Strange-looking rock"
+  },
+  {
+    "max": 87,
+    "occupation": "Smuggler",
+    "weapon": "Sling",
+    "goods": "Waterproof sack"
+  },
+  { "max": 88, "occupation": "Soldier", "weapon": "Spear", "goods": "Shield" },
+  {
+    "max": 90,
+    "occupation": "Squire",
+    "weapon": "Longsword",
+    "goods": "Steel helmet"
+  },
+  {
+    "max": 91,
+    "occupation": "Tax collector",
+    "weapon": "Longsword",
+    "goods": "100 cp"
+  },
+  {
+    "max": 93,
+    "occupation": "Trapper",
+    "weapon": "Sling",
+    "goods": "Badger pelt"
+  },
+  {
+    "max": 94,
+    "occupation": "Urchin",
+    "weapon": "Stick (as club)",
+    "goods": "Begging bowl"
+  },
+  {
+    "max": 95,
+    "occupation": "Wainwright",
+    "weapon": "Club",
+    "goods": "Pushcart"
+  },
+  {
+    "max": 96,
+    "occupation": "Weaver",
+    "weapon": "Dagger",
+    "goods": "Fine suit of clothes"
+  },
+  {
+    "max": 97,
+    "occupation": "Wizard’s apprentice",
+    "weapon": "Dagger",
+    "goods": "Black grimoire"
+  },
+  {
+    "max": 100,
+    "occupation": "Woodcutter",
+    "weapon": "Handaxe",
+    "goods": "Bundle of wood"
+  }
+]

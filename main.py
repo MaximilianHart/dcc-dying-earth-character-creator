@@ -23,12 +23,19 @@ def main():
             f"{'Personality:':13} {peasant.stats['Personality']} ({peasant.personality_mod:+})"
         )
         print(f"{'Luck:':13} {peasant.stats['Luck']} ({peasant.luck_mod:+})")
-        print(f"Max HP: {peasant.max_hp}     AC: {peasant.ac}")
 
-        print(f"\nBirth Augur: {peasant.birth_augur}")
+        print("-" * 40)
+        print(f"HP: {peasant.max_hp:<10} AC: {peasant.ac}")
+        print(
+            f"SAVES | Fort {peasant.fortitude_save:+} | Ref {peasant.reflex_save:+} | Will {peasant.will_save:+}"
+        )
+        print("-" * 40)
+        print(f"Birth Augur: {peasant.birth_augur}")
         print(f"Lucky Roll: {peasant.lucky_roll} ({peasant.luck_mod:+})")
-
-        print("-----------------------")
+        print("-" * 40)
+        print(f"{'Occupation:':12} {peasant.occupation}")
+        character_equipment = ", ".join(peasant.equipment)
+        print(f"{'Equipment:':12} {character_equipment}")
 
         user_input = input(
             "\nType r to repeat and create a new peasant, or q to finish..."
@@ -186,14 +193,74 @@ class Character:
             total_hp += self.luck_mod
         self.max_hp = max(1, total_hp)
 
+    def roll_occupation(self):
+        with open("occupations.json", "r") as f:
+            occupation_data = json.load(f)
+
+        occupation_roll = dice(1, 100)
+        for entry in occupation_data:
+            if occupation_roll <= entry["max"]:
+                self.occupation = entry["occupation"]
+                self.equipment.append(entry["weapon"])
+                self.equipment.append(entry["goods"])
+                break
+
+        if self.occupation == "Farmer":
+            farmer_types = [
+                "Potato",
+                "Wheat",
+                "Turnip",
+                "Corn",
+                "Rice",
+                "Parsnip",
+                "Radish",
+                "Rutabaga",
+            ]
+            specialty = farmer_types[dice(1, 8) - 1]
+            self.occupation = f"{specialty} Farmer"
+
+        self.farm_animals()
+        self.fill_pushcart()
+
+    def farm_animals(self):
+        variety_animals = ["Sheep", "Goat", "Cow", "Duck", "Goose", "Mule"]
+        for i, item in enumerate(self.equipment):
+            if item in ["Hen", "Sow", "Herding dog"]:
+                pool = [item, item, random.choice(variety_animals)]
+                self.equipment[i] = random.choice(pool)
+
+    def fill_pushcart(self):
+        cart_contents = [
+            "Pushcart full of tomatoes",
+            "Empty pushcart",
+            "Pushcart full of straw",
+            "Pushcart carrying your dead",
+            "Pushcart full of dirt",
+            "Pushcart full of rocks",
+        ]
+        for i, item in enumerate(self.equipment):
+            if item == "Pushcart":
+                self.equipment[i] = random.choice(cart_contents)
+
+    def roll_animus(self):
+        with open("animus.json", "r") as f:
+            animus_data = json.load(f)
+        animus_roll = dice(1, 30)
+
+        for entry in animus_data:
+            if animus_roll <= entry["max"]:
+                self.animus["Animus"] = entry["animus"]
+                self.animus["Animus Description"] = entry["animus"]
+                break
+
     def generate_zero_level(self):
         self.roll_stats()
         self.roll_birth_augur()
         self.roll_hp()
+        self.roll_occupation()
+        self.roll_animus()
 
 
-# Determine occupation, starting weapon, trade goods
-#
 # Determine starting animus
 #
 # If vat-thing, determine pattern and starting flaw
@@ -205,6 +272,8 @@ class Character:
 # Determine one random piece of equipment
 #
 # Roll on the Thaumaturgical Curious table
+#
+# Scan equipment for AC-boosting items
 #
 # Generate random name a la https://perchance.org/dying-earth-names#edit
 #
