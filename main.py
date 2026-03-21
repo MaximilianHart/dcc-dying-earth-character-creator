@@ -10,76 +10,39 @@ console = Console(width=70)
 def main():
     print("Welcome to the DCC Dying Earth Character Generator!")
 
-    while True:
-        peasant = Character()
-        peasant.generate_zero_level()
+    mode = input("Output to (s)creen or (f)ile? ").lower()
 
-        wrapper = textwrap.TextWrapper(
-            width=50, initial_indent="  ", subsequent_indent="  "
-        )
-        print(f"\n--- {peasant.name or 'Unnamed Peasant'} ---")
+    if mode == "f":
+        filename = input("Enter filename: ")
+        if not filename.endswith(".txt"):
+            filename += ".txt"
+        try:
+            count = int(input("How many peasants? "))
+        except:
+            count = 1
 
-        print(
-            f"{'Strength:':13} {peasant.stats['Strength']} ({peasant.strength_mod:+})"
-        )
-        print(f"{'Agility:':13} {peasant.stats['Agility']} ({peasant.agility_mod:+})")
-        print(f"{'Stamina:':13} {peasant.stats['Stamina']} ({peasant.stamina_mod:+})")
-        print(
-            f"{'Intelligence:':13} {peasant.stats['Intelligence']} ({peasant.intelligence_mod:+})"
-        )
-        print(
-            f"{'Personality:':13} {peasant.stats['Personality']} ({peasant.personality_mod:+})"
-        )
-        print(f"{'Luck:':13} {peasant.stats['Luck']} ({peasant.luck_mod:+})")
+        with open(filename, "w") as f:
+            for i in range(count):
+                p = Character()
+                p.generate_zero_level()
+                f.write(str(p) + "\n\n" + "=" * 50 + "\n\n")
+        print(f"Exported {count} peasants to {filename}")
+    else:
+        while True:
+            peasant = Character()
+            peasant.generate_zero_level()
+            print(peasant)
 
-        print("-" * 40)
-        print(
-            f"HP: {peasant.max_hp:<5} AC: {peasant.ac:<5} Alignment: {peasant.alignment}"
-        )
-        print(
-            f"SAVES | Fort {peasant.fortitude_save:+} | Ref {peasant.reflex_save:+} | Will {peasant.will_save:+}"
-        )
-        print("-" * 40)
-        print(f"Birth Augur: {peasant.birth_augur}")
-        lucky_info = wrapper.fill(
-            f"Lucky Roll: {peasant.lucky_roll} ({peasant.luck_mod:+})"
-        )
-        print(lucky_info)
-        print("-" * 40)
-        print(f"{'Occupation:':12} {peasant.occupation}")
-        print("-" * 40)
-        print("Starting Equipment:")
-        for item in peasant.equipment:
-            item_wrapper = textwrap.TextWrapper(
-                width=50, initial_indent="  - ", subsequent_indent="    "
+            user_input = input(
+                "\nType r to repeat and create a new peasant, or q to finish..."
             )
-            print(item_wrapper.fill(str(item)))
-        print("-" * 40)
-        print(f"Animus: {peasant.animus['Animus']}")
-        animus_description = wrapper.fill(peasant.animus["Animus Description"] or "")
-        print(animus_description)
-        print("-" * 40)
 
-        if peasant.vat_data.get("Pattern"):
-            print("\n------VAT-THING------")
-            print("Note: Any stat adjustments below must be made manually.")
-            print(f"Starting Flaw: {peasant.vat_data['Starting Flaw']}")
-            print(f"Additional Weapon Training: {peasant.vat_data['Weapon Training']}")
-            print(f"Vat-thing Pattern: {peasant.vat_data['Pattern']}")
-            vat_thing_description = wrapper.fill(peasant.vat_data["Description"] or "")
-            print(vat_thing_description)
-            print("-" * 40)
-
-        user_input = input(
-            "\nType r to repeat and create a new peasant, or q to finish..."
-        )
-
-        if user_input == "r":
-            print("\n" + "=" * 30 + "\n")
-            continue
-        else:
-            print("Good luck in the funnel, peasant!")
-            break
+            if user_input == "r":
+                print("\n" + "=" * 50 + "\n")
+                continue
+            else:
+                print("Good luck in the funnel, peasant!")
+                break
 
 
 def dice(number, size):
@@ -470,10 +433,59 @@ class Character:
         self.roll_thaumaturgical_curio()
         self.roll_name()
 
+    def __str__(self):
+        wrapper = textwrap.TextWrapper(
+            width=50, initial_indent="  ", subsequent_indent="  "
+        )
+        lines = []
+        lines.append(f"--- {self.name or 'Unnamed Peasant'} ---")
+        lines.append(
+            f"{'Strength:':13} {self.stats['Strength']} ({self.strength_mod:+})"
+        )
+        lines.append(f"{'Agility:':13} {self.stats['Agility']} ({self.agility_mod:+})")
+        lines.append(f"{'Stamina:':13} {self.stats['Stamina']} ({self.stamina_mod:+})")
+        lines.append(
+            f"{'Intelligence:':13} {self.stats['Intelligence']} ({self.intelligence_mod:+})"
+        )
+        lines.append(
+            f"{'Personality:':13} {self.stats['Personality']} ({self.personality_mod:+})"
+        )
+        lines.append(f"{'Luck:':13} {self.stats['Luck']} ({self.luck_mod:+})")
+        lines.append("-" * 40)
+        lines.append(
+            f"HP: {self.max_hp:<5} AC: {self.ac:<5} Alignment: {self.alignment}"
+        )
+        lines.append(
+            f"SAVES | Fort {self.fortitude_save:+} | Ref {self.reflex_save:+} | Will {self.will_save:+}"
+        )
+        lines.append("-" * 40)
+        lines.append(f"Birth Augur: {self.birth_augur}")
+        lines.append(wrapper.fill(f"Lucky Roll: {self.lucky_roll} ({self.luck_mod:+})"))
+        lines.append("-" * 40)
+        lines.append(f"{'Occupation:':12} {self.occupation}")
+        lines.append("-" * 40)
+        lines.append("Starting Equipment:")
+        item_wrap = textwrap.TextWrapper(
+            width=50, initial_indent="  - ", subsequent_indent="    "
+        )
+        for item in self.equipment:
+            lines.append(item_wrap.fill(str(item)))
+        lines.append("-" * 40)
+        lines.append(f"Animus: {self.animus['Animus']}")
+        lines.append(wrapper.fill(self.animus["Animus Description"] or ""))
 
-# Scan equipment for AC-boosting items
-#
-# Add random level 1 spell selection ofr casebook for Sage (58-59) occupation
+        if self.vat_data.get("Pattern"):
+            lines.append("\n" + "-" * 21 + "VAT-THING" + "-" * 20)
+            lines.append("Note: Any stat adjustments below must be made manually.")
+            lines.append(f"Starting Flaw: {self.vat_data['Starting Flaw']}")
+            lines.append(
+                f"Additional Weapon Training: {self.vat_data['Weapon Training']}"
+            )
+            lines.append(f"Vat-thing Pattern: {self.vat_data['Pattern']}")
+            lines.append(wrapper.fill(self.vat_data["Description"] or ""))
+
+        return "\n".join(lines)
+
 
 if __name__ == "__main__":
     main()
