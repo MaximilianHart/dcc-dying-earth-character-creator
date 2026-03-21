@@ -4,7 +4,7 @@ import random
 import json
 import textwrap
 
-console = Console()
+console = Console(width=70)
 
 
 def main():
@@ -14,6 +14,9 @@ def main():
         peasant = Character()
         peasant.generate_zero_level()
 
+        wrapper = textwrap.TextWrapper(
+            width=50, initial_indent="  ", subsequent_indent="  "
+        )
         print(f"\n--- {peasant.name or 'Unnamed Peasant'} ---")
 
         print(
@@ -38,19 +41,22 @@ def main():
         )
         print("-" * 40)
         print(f"Birth Augur: {peasant.birth_augur}")
-        print(f"Lucky Roll: {peasant.lucky_roll} ({peasant.luck_mod:+})")
+        lucky_info = wrapper.fill(
+            f"Lucky Roll: {peasant.lucky_roll} ({peasant.luck_mod:+})"
+        )
+        print(lucky_info)
         print("-" * 40)
         print(f"{'Occupation:':12} {peasant.occupation}")
+        print("-" * 40)
+        print("Starting Equipment:")
         for item in peasant.equipment:
-            print(f"  - {item}")
+            item_wrapper = textwrap.TextWrapper(
+                width=50, initial_indent="  - ", subsequent_indent="    "
+            )
+            print(item_wrapper.fill(str(item)))
         print("-" * 40)
         print(f"Animus: {peasant.animus['Animus']}")
-        animus_wrapper = textwrap.TextWrapper(
-            width=50, initial_indent="  ", subsequent_indent="  "
-        )
-        animus_description = animus_wrapper.fill(
-            peasant.animus["Animus Description"] or ""
-        )
+        animus_description = wrapper.fill(peasant.animus["Animus Description"] or "")
         print(animus_description)
         print("-" * 40)
 
@@ -60,12 +66,7 @@ def main():
             print(f"Starting Flaw: {peasant.vat_data['Starting Flaw']}")
             print(f"Additional Weapon Training: {peasant.vat_data['Weapon Training']}")
             print(f"Vat-thing Pattern: {peasant.vat_data['Pattern']}")
-            vat_thing_wrapper = textwrap.TextWrapper(
-                width=50, initial_indent="  ", subsequent_indent="  "
-            )
-            vat_thing_description = vat_thing_wrapper.fill(
-                peasant.vat_data["Description"] or ""
-            )
+            vat_thing_description = wrapper.fill(peasant.vat_data["Description"] or "")
             print(vat_thing_description)
             print("-" * 40)
 
@@ -440,6 +441,22 @@ class Character:
 
         self.equipment.append(random.choice(curios)["item"])
 
+    def roll_name(self):
+        with open("names.json", "r") as f:
+            names = json.load(f)
+
+        roll = dice(1, 4)
+        if roll <= 2:
+            self.name = random.choice(names)
+        elif roll == 3:
+            first_name = random.choice(names)
+            last_name = random.choice(names)
+            self.name = f"{first_name} {last_name}"
+        else:
+            name = random.choice(names)
+            place = random.choice(names)
+            self.name = f"{name} of {place}"
+
     def generate_zero_level(self):
         self.roll_stats()
         self.roll_birth_augur()
@@ -451,16 +468,12 @@ class Character:
         self.roll_languages()
         self.roll_starting_equipment()
         self.roll_thaumaturgical_curio()
+        self.roll_name()
 
 
 # Scan equipment for AC-boosting items
 #
 # Add random level 1 spell selection ofr casebook for Sage (58-59) occupation
-#
-# Generate random name a la https://perchance.org/dying-earth-names#edit
-#
-# Print full character, possibly nicely formatted.
-#
 
 if __name__ == "__main__":
     main()
