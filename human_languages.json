@@ -1,0 +1,19 @@
+[
+  { "max": 20, "language": "Alignment Tongue" },
+  { "max": 22, "language": "Asm" },
+  { "max": 25, "language": "Busiaco" },
+  { "max": 35, "language": "Castillion" },
+  { "max": 45, "language": "Dilk" },
+  { "max": 55, "language": "Lizardman" },
+  { "max": 61, "language": "Maot" },
+  { "max": 71, "language": "Melantine" },
+  { "max": 75, "language": "Mermelant" },
+  { "max": 76, "language": "Murid" },
+  { "max": 78, "language": "Oast" },
+  { "max": 80, "language": "Old Naotic" },
+  { "max": 82, "language": "Pelgrane" },
+  { "max": 92, "language": "Saponid" },
+  { "max": 93, "language": "Sxyzyskzyik" },
+  { "max": 99, "language": "Twk-man" },
+  { "max": 100, "language": "Visp" }
+]

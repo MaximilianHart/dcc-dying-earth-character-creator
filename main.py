@@ -1,6 +1,10 @@
+from typing import Dict
+from rich.console import Console
 import random
 import json
 import textwrap
+
+console = Console()
 
 
 def main():
@@ -27,7 +31,7 @@ def main():
 
         print("-" * 40)
         print(
-            f"HP: {peasant.max_hp:<10} AC: {peasant.ac} Alignment: {peasant.alignment}"
+            f"HP: {peasant.max_hp:<5} AC: {peasant.ac:<5} Alignment: {peasant.alignment}"
         )
         print(
             f"SAVES | Fort {peasant.fortitude_save:+} | Ref {peasant.reflex_save:+} | Will {peasant.will_save:+}"
@@ -37,8 +41,8 @@ def main():
         print(f"Lucky Roll: {peasant.lucky_roll} ({peasant.luck_mod:+})")
         print("-" * 40)
         print(f"{'Occupation:':12} {peasant.occupation}")
-        character_equipment = ", ".join(peasant.equipment)
-        print(f"{'Equipment:':12} {character_equipment}")
+        for item in peasant.equipment:
+            print(f"  - {item}")
         print("-" * 40)
         print(f"Animus: {peasant.animus['Animus']}")
         animus_wrapper = textwrap.TextWrapper(
@@ -113,7 +117,7 @@ class Character:
             "Weapon Training": "",
             "Description": "",
         }
-        self.alignment = None
+        self.alignment = ""
         self.languages = []
 
     @property
@@ -368,6 +372,74 @@ class Character:
         self.vat_data["Starting Flaw"] = ", ".join(names)
         self.vat_data["Flaw Description"] = " | ".join(descriptions)
 
+    def roll_alignment(self):
+        roll = dice(1, 4)
+        if roll == 1:
+            self.alignment = "Lawful"
+        elif roll == 2:
+            self.alignment = "Neutral"
+        else:
+            self.alignment = "Chaotic"
+
+    def roll_languages(self):
+        alignment_map: Dict[str, str] = {
+            "Lawful": "Law",
+            "Chaotic": "Chaos",
+            "Neutral": "Neutrality",
+        }
+        self.languages = ["Common tongue of the 21st Aeon"]
+        self.is_literate = self.stats["Intelligence"] > 5
+
+        if self.stats["Intelligence"] <= 7:
+            return
+
+        is_vat = self.occupation and self.occupation.startswith("Vat-thing")
+        filename = "vat_thing_languages.json" if is_vat else "human_languages.json"
+
+        with open(filename, "r") as f:
+            language_data = json.load(f)
+
+        num_bonus = max(0, self.intelligence_mod)
+
+        for i in range(num_bonus):
+            while True:
+                roll = dice(1, 100)
+                selected = ""
+
+                for entry in language_data:
+                    if roll <= entry["max"]:
+                        selected = entry["language"]
+                        break
+
+                if selected == "Alignment Tongue":
+                    lang_noun = alignment_map.get(str(self.alignment), "Chaos")
+                    selected = f"{lang_noun}"
+
+                if selected not in self.languages:
+                    self.languages.append(selected)
+                    break
+                else:
+                    continue
+
+    def roll_starting_equipment(self):
+        with open("starting_equipment.json", "r") as f:
+            items = json.load(f)
+
+        choice = random.choice(items)
+        item_name = choice["item"]
+
+        if "options" in choice:
+            sub_choice = random.choice(choice["options"])
+            item_name = f"{item_name} ({sub_choice})"
+
+        self.equipment.append(item_name)
+
+    def roll_thaumaturgical_curio(self):
+        with open("thaumaturgical_curios.json", "r") as f:
+            curios = json.load(f)
+
+        self.equipment.append(random.choice(curios)["item"])
+
     def generate_zero_level(self):
         self.roll_stats()
         self.roll_birth_augur()
@@ -375,16 +447,12 @@ class Character:
         self.roll_occupation()
         self.roll_animus()
         self.vat_thing()
+        self.roll_alignment()
+        self.roll_languages()
+        self.roll_starting_equipment()
+        self.roll_thaumaturgical_curio()
 
 
-# Determine languages
-#
-# Determine alignment
-#
-# Determine one random piece of equipment
-#
-# Roll on the Thaumaturgical Curious table
-#
 # Scan equipment for AC-boosting items
 #
 # Add random level 1 spell selection ofr casebook for Sage (58-59) occupation

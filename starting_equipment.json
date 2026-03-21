@@ -1,0 +1,58 @@
+[
+  { "roll": 1, "item": "Aged wine, 1 stoneware bottle", "cost": "5 terces" },
+  { "roll": 2, "item": "Arrak, 1 jug", "cost": "2 terces" },
+  { "roll": 3, "item": "Bedroll", "cost": "2 terces" },
+  { "roll": 4, "item": "Blagin’s Mulcent, 1 vial", "cost": "1 terce" },
+  { "roll": 5, "item": "Boots, fashionable", "cost": "5 terces" },
+  { "roll": 6, "item": "Boots, sturdy", "cost": "2 terces" },
+  { "roll": 7, "item": "Burdock beer, 1 flask", "cost": "1 groat" },
+  { "roll": 8, "item": "Cloak", "cost": "7 terces" },
+  {
+    "roll": 9,
+    "item": "Clothing, fashionable",
+    "cost": "25 terces",
+    "options": [
+      "Gown",
+      "Antique tabard",
+      "Breeches flared after the taste of Kauchique",
+      "Breeches fringed and tasseled in the style of Old Romarth",
+      "Breeches pied and gored in the extravagant Andromach mode",
+      "Panache of feathers"
+    ]
+  },
+  { "roll": 10, "item": "Dream-powders, 1 oz.", "cost": "10 terces" },
+  { "roll": 11, "item": "Explosive diambroid, 1 minim", "cost": "25 terces" },
+  { "roll": 12, "item": "Hat, fashionable", "cost": "5 terces" },
+  { "roll": 13, "item": "Glowing orb", "cost": "10 terces" },
+  { "roll": 14, "item": "Mirror, hand-sized", "cost": "10 terces" },
+  { "roll": 15, "item": "Pannikin, drinking", "cost": "5 groats" },
+  { "roll": 16, "item": "Parchment, per page", "cost": "1 groat" },
+  {
+    "roll": 17,
+    "item": "Rations, per day",
+    "cost": "5 copper bits",
+    "options": [
+      "Sweetmeats of assorted flavors",
+      "Boiled burdock leaves",
+      "Fried moss and ganions",
+      "Oil-fish, smoked and served with garlic and one leek"
+    ]
+  },
+  {
+    "roll": 18,
+    "item": "Reference text",
+    "cost": "10 terces",
+    "options": [
+      "Cyclopedia of Natural History",
+      "Madame Milgrim’s Dainty Recipes",
+      "Scroll listing eighteen phases of the Laganetic Cycle",
+      "Dusts and Microvies of the Latter Aeons"
+    ]
+  },
+  { "roll": 19, "item": "Rope, 50’", "cost": "25 copper bits" },
+  { "roll": 20, "item": "Sack, large", "cost": "12 copper bits" },
+  { "roll": 21, "item": "Salt, 5 grams", "cost": "1 copper bit" },
+  { "roll": 22, "item": "Shovel", "cost": "1 terce" },
+  { "roll": 23, "item": "Thyle-dust, 1 oz.", "cost": "10 terces" },
+  { "roll": 24, "item": "Torch, each", "cost": "1 copper bit" }
+]
