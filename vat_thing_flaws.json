@@ -1,0 +1,157 @@
+[
+  {
+    "max": 0,
+    "flaw": "Perfect synthesis",
+    "desc": "The PC emerges from the vats as a complete form, without defect."
+  },
+  {
+    "max": 1,
+    "flaw": "Lingering wanness",
+    "desc": "The PC appears ashen-skinned and gray-eyed."
+  },
+  {
+    "max": 2,
+    "flaw": "Overlapping plates",
+    "desc": "Flesh is covered in overlapping plates. Base AC 11, but -1 penalty to physical checks (climb, jump, etc.). Roll 1d4 for type: (1) feathers; (2) scales; (3) chitin; (4) steel."
+  },
+  {
+    "max": 3,
+    "flaw": "Improper voidure",
+    "desc": "The PC suffers from a compelling indigestion."
+  },
+  {
+    "max": 4,
+    "flaw": "Torpid countenance",
+    "desc": "The PC’s facial features are slack and limpid."
+  },
+  {
+    "max": 5,
+    "flaw": "Void of the mind",
+    "desc": "The vat-thing has a fundamental yearning. Roll 1d4 for type: (1) knowledge; (2) love; (3) beauty; (4) truth."
+  },
+  {
+    "max": 6,
+    "flaw": "Echoes of the past",
+    "desc": "Wracked by memories of a previous existence. The vat-thing suffers a -1 penalty to initiative rolls."
+  },
+  {
+    "max": 7,
+    "flaw": "Spasmodic musculature",
+    "desc": "Uncontrolled bouts of muscle spasms, resulting in a -5’ speed penalty."
+  },
+  {
+    "max": 8,
+    "flaw": "Soporific",
+    "desc": "The PC must sleep for twice as long as others to gain the benefits of a full night’s rest."
+  },
+  {
+    "max": 9,
+    "flaw": "Impaired skein",
+    "desc": "Visual overlay between this world and another. Roll 1d4: (1) La-Er; (2) Kalu; (3) Overworld; (4) Jangk. -1 penalty to any action requiring vision."
+  },
+  {
+    "max": 10,
+    "flaw": "Rachitic ligaments",
+    "desc": "The PC suffers from aches at a specific time of day. Roll 1d4: (1) morning; (2) evening; (3) noon; (4) before storms."
+  },
+  {
+    "max": 11,
+    "flaw": "Wine-colored skin",
+    "desc": "Infused with the light of the dying sun. +1 bonus to all attempts to hide in wilderness settings."
+  },
+  {
+    "max": 12,
+    "flaw": "Scintillant eyes",
+    "desc": "The PC’s eyes flash in the darkness; -2 penalty to all attempts to hide."
+  },
+  {
+    "max": 13,
+    "flaw": "Purulent weeping",
+    "desc": "Seeps a pus-like substance that gums up eyelids when asleep, requiring a full round to clear upon waking."
+  },
+  {
+    "max": 14,
+    "flaw": "Ice-cold skin",
+    "desc": "Any creature touched by the vat-thing suffers 1 hit point of cold damage per round."
+  },
+  {
+    "max": 15,
+    "flaw": "Vestigial pro-ubietal chute",
+    "desc": "Leftover vat-tissue extending from the body. The PC suffers a +1d penalty to all fumble rolls."
+  },
+  {
+    "max": 16,
+    "flaw": "Hydrocephalic",
+    "desc": "The PC has an over-large head and cannot wear normal helmets."
+  },
+  {
+    "max": 17,
+    "flaw": "Pap-fed",
+    "desc": "The PC can only digest soft or semi-liquid foods."
+  },
+  {
+    "max": 18,
+    "flaw": "Variegated appearance",
+    "desc": "Differently colored areas of skin that contrast dramatically with their neighbors."
+  },
+  {
+    "max": 19,
+    "flaw": "Deformed limb",
+    "desc": "Roll 1d4 for type: (1-2) arm; (3-4) leg. -1 penalty to physical checks (climb, jump, swim, etc.)."
+  },
+  {
+    "max": 20,
+    "flaw": "Oleaginous flesh",
+    "desc": "The PC is 50% heavier than average, requiring specially-fitted clothing and armor."
+  },
+  {
+    "max": 21,
+    "flaw": "Incomplete genesis",
+    "desc": "Boneless creature with pulsing brain exposed. Permanent -1 Strength and -1 Personality (applied after pattern mods)."
+  },
+  {
+    "max": 22,
+    "flaw": "Fused appendage",
+    "desc": "The PC suffers a permanent loss of -1 Agility (applied after pattern mods)."
+  },
+  {
+    "max": 23,
+    "flaw": "Vat-weary",
+    "desc": "Permanently loses 1 point of Stamina and Personality due to the strain of coming to life."
+  },
+  {
+    "max": 24,
+    "flaw": "Vitreous skin",
+    "desc": "Glassy-skinned; suffers double damage from fire-based attacks."
+  },
+  {
+    "max": 25,
+    "flaw": "Intestinal fibrils",
+    "desc": "Beautiful body with intestines trailing out like seeking fibrils. -2 penalty to Personality-based checks."
+  },
+  {
+    "max": 26,
+    "flaw": "Covered with eyes",
+    "desc": "The vat-thing is covered with eyes. -2d penalty to all Personality-based checks."
+  },
+  {
+    "max": 27,
+    "flaw": "Inverted creature",
+    "desc": "The PC emerged inside-out. -3d penalty to all Personality-based checks."
+  },
+  {
+    "max": 28,
+    "flaw": "Hatred of beauty",
+    "desc": "Must make a Will save vs DC of a person's Personality upon meeting or be consumed by hatred for them."
+  },
+  {
+    "max": 29,
+    "flaw": "Decayed appearance",
+    "desc": "Flesh falls off in chunks. Lose 1d4 HP per day; only magical healing staves off decay."
+  },
+  {
+    "max": 30,
+    "flaw": "Double mutation",
+    "desc": "Roll again twice, ignoring any duplicate results."
+  }
+]

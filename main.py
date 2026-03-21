@@ -26,7 +26,9 @@ def main():
         print(f"{'Luck:':13} {peasant.stats['Luck']} ({peasant.luck_mod:+})")
 
         print("-" * 40)
-        print(f"HP: {peasant.max_hp:<10} AC: {peasant.ac}")
+        print(
+            f"HP: {peasant.max_hp:<10} AC: {peasant.ac} Alignment: {peasant.alignment}"
+        )
         print(
             f"SAVES | Fort {peasant.fortitude_save:+} | Ref {peasant.reflex_save:+} | Will {peasant.will_save:+}"
         )
@@ -39,12 +41,29 @@ def main():
         print(f"{'Equipment:':12} {character_equipment}")
         print("-" * 40)
         print(f"Animus: {peasant.animus['Animus']}")
-        animus_wrapper = textwrap.TextWrapper(width=50)
+        animus_wrapper = textwrap.TextWrapper(
+            width=50, initial_indent="  ", subsequent_indent="  "
+        )
         animus_description = animus_wrapper.fill(
             peasant.animus["Animus Description"] or ""
         )
         print(animus_description)
         print("-" * 40)
+
+        if peasant.vat_data.get("Pattern"):
+            print("\n------VAT-THING------")
+            print("Note: Any stat adjustments below must be made manually.")
+            print(f"Starting Flaw: {peasant.vat_data['Starting Flaw']}")
+            print(f"Additional Weapon Training: {peasant.vat_data['Weapon Training']}")
+            print(f"Vat-thing Pattern: {peasant.vat_data['Pattern']}")
+            vat_thing_wrapper = textwrap.TextWrapper(
+                width=50, initial_indent="  ", subsequent_indent="  "
+            )
+            vat_thing_description = vat_thing_wrapper.fill(
+                peasant.vat_data["Description"] or ""
+            )
+            print(vat_thing_description)
+            print("-" * 40)
 
         user_input = input(
             "\nType r to repeat and create a new peasant, or q to finish..."
@@ -88,6 +107,13 @@ class Character:
         self.animus = {"Animus": None, "Animus Description": None}
         self.birth_augur = None
         self.lucky_roll = None
+        self.vat_data = {
+            "Pattern": "",
+            "Starting Flaw": "",
+            "Weapon Training": "",
+            "Description": "",
+        }
+        self.alignment = None
         self.languages = []
 
     @property
@@ -286,18 +312,71 @@ class Character:
                 self.animus["Animus Description"] = entry["desc"]
                 break
 
+    def vat_thing(self):
+        if self.occupation and self.occupation.startswith("Vat-thing"):
+            patterns = ["Martial", "Paragon", "Theologue"]
+            alignment = ["Chaotic", "Neutral", "Lawful"]
+            weapon_training = [
+                "Mace, flail, dart, battle-hook",
+                "Axe (any), bow (any), arrow-gun",
+                "Rapier, longsword, sling, snaffle-iron",
+            ]
+            self.vat_data["Pattern"] = random.choice(patterns)
+            self.vat_data["Alignment"] = random.choice(alignment)
+            self.vat_data["Weapon Training"] = random.choice(weapon_training)
+
+            if self.vat_data["Pattern"] == "Martial":
+                self.vat_data["Description"] = (
+                    "You are a fighter, a tactician, a weapons-master created bu am arch-mage to guard their manse and command their armies. At 0 level, a vat-thing created from a martial pattern increases its Strength and Stamina until each modifier increases by one (e.g., a 9 Strength increases to a 13, and an 18 Stamina increases to a 20). In addition, starting at 1st level, a martial vat-thing receives a bonus die that is used when making attacks."
+                )
+            elif self.vat_data["Pattern"] == "Paragon":
+                self.vat_data["Description"] = (
+                    "You are a sculptor, a painter, a dancer, a courtesan made to fill a reclusive magician's household with works of art and the vibrant sounds of creation. At 0 level, a vat-thing created from a paragon pattern increases its Agility and Personality until each modifier increase by one (e.g., a 9 Agility increases to a 13, and an 18 Personality increases to a 20). In addition, starting at 1st level, a paragon vat-thing receives a bonus die that can be used when making skill checks."
+                )
+            elif self.vat_data["Pattern"] == "Theologue":
+                self.vat_data["Description"] = (
+                    "You are the memory, a counselor, a savant shaped by a great sorcerer to be a living encyclopaedist. At 0 level, a vat-thing created from a theologue pattern increases its Intelligence ability score until the modifier increases by one (e.g., a 9 Intelligence increases to a 13). In addition, starting at 1st level, a theologue vat-thing receives a bonus die that can be used when making skill checks, including when attempting to learn new spells or re-roll an existing one upon leveling (see p. 27)."
+                )
+            else:
+                self.vat_data["Description"] = ""
+
+            self.roll_vat_flaw()
+
+    def roll_vat_flaw(self, existing_flaws=None):
+        if existing_flaws is None:
+            existing_flaws = []
+
+        with open("vat_thing_flaws.json", "r") as f:
+            flaw_data = json.load(f)
+
+        vat_roll = dice(1, 30) + self.luck_mod
+
+        if vat_roll >= 30:
+            self.roll_vat_flaw(existing_flaws)
+            self.roll_vat_flaw(existing_flaws)
+        else:
+            for entry in flaw_data:
+                if vat_roll <= entry["max"]:
+                    if entry["flaw"] not in [f["name"] for f in existing_flaws]:
+                        existing_flaws.append(
+                            {"name": entry["flaw"], "desc": entry["desc"]}
+                        )
+                    break
+
+        names = [f["name"] for f in existing_flaws]
+        descriptions = [f["desc"] for f in existing_flaws]
+        self.vat_data["Starting Flaw"] = ", ".join(names)
+        self.vat_data["Flaw Description"] = " | ".join(descriptions)
+
     def generate_zero_level(self):
         self.roll_stats()
         self.roll_birth_augur()
         self.roll_hp()
         self.roll_occupation()
         self.roll_animus()
+        self.vat_thing()
 
 
-# Determine starting animus
-#
-# If vat-thing, determine pattern and starting flaw
-#
 # Determine languages
 #
 # Determine alignment
